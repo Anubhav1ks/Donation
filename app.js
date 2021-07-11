@@ -1,7 +1,7 @@
 //jshint esversion:6
 //require npm modues
 
-
+const Paytm = require('paytmchecksum');
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
