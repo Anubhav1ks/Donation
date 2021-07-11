@@ -75,6 +75,9 @@ app.get("/contact", function(req , res){
 app.get("/new", function(req , res){
   res.render("new");
 });
+app.get("/success", function(req , res){
+  res.render("success");
+});
 app.get("/sendmoney", function(req , res){
   res.render("sendmoney");
 });
@@ -242,7 +245,7 @@ app.post("/callback", (req, res) => {
 
            var _result = JSON.parse(response);
              if(_result.STATUS == 'TXN_SUCCESS') {
-                 res.render("sucess");
+                 res.redirect("/sucess");
              }else {
                  res.render("fail");
              }
