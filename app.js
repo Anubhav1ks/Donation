@@ -75,6 +75,9 @@ app.get("/contact", function(req , res){
 app.get("/new", function(req , res){
   res.render("new");
 });
+app.get("/success", function(req , res){
+  res.render("success");
+});
 app.get("/sendmoney", function(req , res){
   res.render("sendmoney");
 });
@@ -155,7 +158,7 @@ if(!paymentDetails.amount || !paymentDetails.customerId || !paymentDetails.custo
     params['ORDER_ID'] = 'TEST_'  + new Date().getTime();
     params['CUST_ID'] = 'TEST_'  + new Date().getTime();
     params['TXN_AMOUNT'] = paymentDetails.amount;
-    params['CALLBACK_URL'] = 'https://anubhav1kstask-2.herokuapp.com/callback';
+    params['CALLBACK_URL'] = 'https://anubhav1kstask-2.herokuapp.com/success';
     params['EMAIL'] = paymentDetails.customerEmail;
     params['MOBILE_NO'] = paymentDetails.customerPhone;
     const bank = new Bank({
