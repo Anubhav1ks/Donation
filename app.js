@@ -245,7 +245,7 @@ app.post("/callback", (req, res) => {
 
            var _result = JSON.parse(response);
              if(_result.STATUS == 'TXN_SUCCESS') {
-                 res.redirect("/sucess");
+                 res.redirect("/success");
              }else {
                  res.render("fail");
              }
