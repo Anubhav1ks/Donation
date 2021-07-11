@@ -15,7 +15,7 @@ const https = require("https");
 const qs = require("querystring");
 
 const checksum_lib = require("./paytm/checksum");
-const config = require("./config");
+const config = require("./paytm/config");
 
 const app = express();
 
