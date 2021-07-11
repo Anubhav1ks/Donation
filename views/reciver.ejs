@@ -1,0 +1,34 @@
+<%- include('partials/header'); -%>
+
+
+<form class="" action="/reciver" method="post">
+  <div class="form-group">
+    <label for="">Sender Email: </label>
+    <input list="browsers" name="browser" id="browser" autocomplete="off">
+    <datalist id="browsers">
+    <%  Email.forEach(function(person){ %>
+            <option value=<%= person.email%>>
+    <% }) %>
+
+  </datalist>
+  </div>
+  <div class="form-group">
+    <label for="">Reviver Email: </label>
+    <input list="browsers" name="browser" id="browser" autocomplete="off">
+    <datalist id="browsers">
+    <%  Email.forEach(function(person){ %>
+            <option value=<%= person.email%>>
+    <% }) %>
+
+  </datalist>
+  </div >
+    <div class="Amount form-group">
+    <label for="">Amount: </label>
+    <input class="form-control" id="your_input" type="number" name="amount" value="" autocomplete="off">
+  </div>
+  <div class="form-group">
+    <button type="submit" class="btn form-control btn-primary">submit</button>
+  </div>
+</form>
+
+<%- include('partials/footer'); -%>

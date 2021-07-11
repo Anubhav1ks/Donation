@@ -1,0 +1,30 @@
+<%- include('partials/header'); -%>
+
+<table style="width:100%">
+  <tr>
+    <th><h3>Name</h3></th>
+    <th><h3>Email</h3></th>
+    <th><h3>Mobile no.</h3></th>
+    <th><h3>Balance</h3></th>
+
+    <%# <th></th> %>
+  </tr>
+  <%  member.forEach(function(person){ %>
+    <tr>
+      <th><h5><%=person.name%></h5></th>
+      <th><h5><%=person.email%></h5></th>
+      <th><h5><%=person.number%></h5></th>
+      <th><h5><%=person.amount%></h5></th>
+      <th><button type="button" id="<%=person.amount%>" name="id"  class="send btn btn-outline-light download-butten"> <a href="/reciver">Send</a></button></th>
+    </tr>
+<% }) %>
+
+</table>
+
+<button type="button" class="btn btn-outline-light btn-lg download-butten"> <a href="/new">add new member</a> </button>
+
+
+
+
+
+<%- include('partials/footer'); -%>

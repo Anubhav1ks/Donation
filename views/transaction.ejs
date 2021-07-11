@@ -1,0 +1,25 @@
+<%- include('partials/header'); -%>
+
+
+<table style="width:100%">
+  <tr>
+    <th><h3>Name</h3></th>
+    <th><h3>Email</h3></th>
+    <th><h3>Number</h3></th>
+    <th><h3>Amount</h3></th>
+  </tr>
+  <%  alltransaction.forEach(function(history){ %>
+    <tr>
+      <th><h5 class="send1" style="font-size:1.5rem;"><%=history.name%></h5></th>
+      <th><h5 class="send1" style="font-size:1.5rem;"><%=history.email%></h5></th>
+      <th><h5 class="send1" style="font-size:1.5rem;"><%=history.number%></h5></th>
+      <th><h5 class="send1" style="font-size:1.5rem;"><%=history.amount%></h5></th>
+
+    </tr>
+
+    <% }) %>
+
+</table>
+
+
+<%- include('partials/footer'); -%>
