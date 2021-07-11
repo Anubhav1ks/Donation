@@ -76,7 +76,7 @@ app.get("/new", function(req , res){
   res.render("new");
 });
 app.get("/success", function(req , res){
-  res.render("success");
+  res.render("sucess");
 });
 app.get("/sendmoney", function(req , res){
   res.render("sendmoney");
