@@ -158,7 +158,7 @@ if(!paymentDetails.amount || !paymentDetails.customerId || !paymentDetails.custo
     params['ORDER_ID'] = 'TEST_'  + new Date().getTime();
     params['CUST_ID'] = 'TEST_'  + new Date().getTime();
     params['TXN_AMOUNT'] = paymentDetails.amount;
-    params['CALLBACK_URL'] = 'https://anubhav1kstask-2.herokuapp.com/success';
+    params['CALLBACK_URL'] = 'https://anubhav1kstask-2.herokuapp.com//callback';
     params['EMAIL'] = paymentDetails.customerEmail;
     params['MOBILE_NO'] = paymentDetails.customerPhone;
     const bank = new Bank({
@@ -245,7 +245,7 @@ app.post("/callback", (req, res) => {
 
            var _result = JSON.parse(response);
              if(_result.STATUS == 'TXN_SUCCESS') {
-                 res.render("success");
+                 res.redirect("/sucess");
              }else {
                  res.render("fail");
              }
